@@ -1,101 +1,212 @@
-*{
+* {
     box-sizing: border-box;
+    border-radius: 1.5%;
     padding: 0;
     margin: 0;
 }
 
 body{
-    background-color: grey;
-    text-transform: capitalize;
-}
+    text-transform: uppercase;
+    background: url(images/Woods.jpg) fixed;
 
-.title{
-    text-align: center;
-    margin: 1.5em;
-    padding: 1.5em;
 }
-
-.core{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    border: 2px solid black;
-    width: 45%;
-    height: 60%;
-    transform: translate(-50%, -50%);
-    border-radius: 2%;
-    background-color: lightgray;
-    
-}
-
-.start .startButton{
-    position: absolute;
-    bottom: 5%;
-    left: 45%;
-    right: 45%;
-    width: 10%;
-    height: 5%;
-}
-
-.box .photos{
-    width: 200px;
-	height: 200px;
-  background: darkgray;
-  
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  
-  transform: translate(-50%, -50%);
-}
-
-/* Starts css for Question */
 
 .header{
     text-align: center;
+    color: black;
+    border: .1em solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .5em;
+    margin-bottom: 2em;
+    background: rgb(5, 78, 5);
+    max-width: 25em;
+    border-radius: 2%;
+
 }
 
-.header li{
+
+
+.header li {
     display: inline-block;
     font-size: 1.5em;
-    margin: 2em;
+    margin: 1em;
+    list-style: none;
 }
 
-.box .button {
-    position: absolute;
-    bottom: 5%;
-    left: 45%;
-    right: 45%;
-    width: 10%;
-    height: 5%;
+.quizBorder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+    border: .2em solid black;
+    background: rgb(5, 78, 5);
 }
 
-.question{
-    margin: 1.5em;
+.start
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: auto;
+    padding: 1em;
+    border: 0.2em solid black;
+
 }
 
-.box .answers{
-    width: 200px;
-	height: 200px;
-  background: darkgray;
-  
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: left;
-  transform: translate(-50%, -50%);
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    cursor: pointer;
 }
 
-/*Starts for Response*/
+.photos {
+    margin-bottom: 0.5em;
+    width: 90%;
+    max-width: 240px;
+}
 
-.box .answers .response{
-    width: 200px;
-	height: 200px;
-  background: darkgray;
-  
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: left;
-  transform: translate(-50%, -50%);
+.button{
+    margin-left: auto;
+    margin-right: auto;
+    height: 3em;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: .1em solid black;
+    background-color: rgb(165, 81, 42);
+    color: white;
+}
+
+h1,
+h3,
+legend {
+    margin-bottom: 0.5em;
+}
+
+.button:hover,
+.button:active {
+    background-color: cornsilk;
+    color: black;
+} 
+
+.final{
+    display: block;
+}
+
+@media only screen and (min-width: 320px) {
+    .compass {
+      width: 40%;
+    }
+
+    .quizBorder{
+        width: 85%;
+        height: 30em;
+        margin-bottom: 1em;
+        margin-top: 1em;
+        padding-bottom: .5em;
+        padding-top: .5em;
+    }
+
+    .box{
+        height: 85%;
+        width: 85%;
+    }
+
+    .photos{
+        width: 80%;
+    }
+
+    .button {
+        margin-top: 0.5em;
+        font-size: 1em;
+        height: 2.5em;
+        width: 8em;
+    
+    }
+
+    .header li {
+        font-size: 1em;
+    }
+
+    h1,
+    h3,
+    legend {
+        font-size: 1em;
+    }
+
+    .trackerBar{
+        font-size: 1em;
+        margin: .1em;
+    }
+}
+
+@media only screen and (min-width: 550px) {
+    .quizBorder{
+        height: 32em;
+        width: 30em;
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+    }
+
+    .box {
+        width: 85%;
+        height: 98%;
+    }
+
+    .button {
+        margin-top: 1em;
+        font-size: 1em;
+        width: 10em;
+        height: 2.5em;
+    }
+
+    h1,
+    h3,
+    legend {
+        font-size: 1em;
+    }
+
+    .trackerBar{
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width: 800px) {  
+    .header li {
+      margin: 1em;
+      font-size: 1.3em;
+    }
+
+    .quizBorder{
+        height: 38em;
+        width: 35em;
+    }
+
+    .box {
+        width: 85%;
+        height: 95%;
+    }
+    
+    h1,
+    h3,
+    legend {
+        font-size: 1.3em;
+    }
+
+    .trackerBar{
+        font-size: 1em;
+    }
+
+    .button {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 12em;
+        font-size: 1.2em;
+    }
 }
