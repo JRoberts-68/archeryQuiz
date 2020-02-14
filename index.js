@@ -38,6 +38,16 @@ const STORE = [
             'Japan'
         ],
         correctAnswer: 'China'
+    },
+    {
+        question: 'What is the name of the container used to carry arrows in?',
+        answers:[
+            'Belt',
+            'Quiver',
+            'Bundle',
+            'Satchel'
+        ],
+        correctAnswer: 'Quiver'
     }
 ];
 
@@ -88,6 +98,7 @@ function submitAnswer() {
         $('.respond').show();
         let selected = $('input:checked');
         let answer = selected.val();
+        console.log(answer);
         let correct = STORE[questionNum].correctAnswer;
         if (answer === correct) {
             correctAnswer();
@@ -109,7 +120,7 @@ function createForm(questionIndex) {
     STORE[questionIndex].answers.forEach(function(answerVal, answerInd){
         $(`<label class="trackerBar" for="${answerInd}">
             <input class="radio" type="radio"
-            id="${answerInd}" value=${answerVal}" name="answer" required>
+            id="${answerInd}" value="${answerVal}" name="answer" required>
             <span>${answerVal}</span>
         </label>`).appendTo(formField);
     });
@@ -151,7 +162,7 @@ function finalScore(){
         'Well Done!',
         'images/bullseye.jpg',
         'Bullseye',
-        'What A Shot!!.'
+        'What A Shot!!'
     ];
 
     const fail = [
@@ -182,6 +193,7 @@ function quizReset(){
         quizInfoReset();
         $('.boxAlt').hide();
         $('.quizStart').show();
+        $('.start').show();
     });
 }
 
